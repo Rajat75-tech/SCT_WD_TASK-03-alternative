@@ -1,0 +1,140 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container styling */
+.quiz-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  width: 100%;
+  max-width: 650px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Timer */
+#timer {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  transition: color 0.5s;
+}
+
+.blink {
+  color: red;
+  animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Question styling */
+#question {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* Option buttons */
+#options label {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+  text-align: left;
+}
+
+#options label:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #00bcd4;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #008c9e;
+}
+
+/* Input box */
+#blank-input {
+  padding: 10px;
+  width: 90%;
+  margin: 15px auto;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Result section */
+.hidden {
+  display: none;
+}
+
+#result h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  #question {
+    font-size: 1.2rem;
+  }
+
+  #options label {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #timer {
+    font-size: 1.4rem;
+  }
+
+  #question {
+    font-size: 1rem;
+  }
+
+  #options label {
+    font-size: 0.9rem;
+  }
+
+  #blank-input {
+    width: 100%;
+  }
+}
